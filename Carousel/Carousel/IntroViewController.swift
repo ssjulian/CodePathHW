@@ -19,8 +19,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var photo5: UIImageView!
     @IBOutlet weak var photo6: UIImageView!
     
-    var yOffsets : [Float] = [-285, -240, -415, -408, -480, -500]
-    var xOffsets : [Float] = [-30, 75, -66, 10, -200, -15]
+    var yOffsets : [Float] = [-317, -240, -425, -408, -500, -480]
+    var xOffsets : [Float] = [-60, 60, -66, 100, -100, 30]
     var scales : [Float] = [1, 1.65, 1.7, 1.6, 1.65, 1.65]
     var rotations : [Float] = [-10, -10, 10, 10, 10, -10]
 
@@ -106,6 +106,8 @@ class IntroViewController: UIViewController, UIScrollViewDelegate {
             CGAffineTransformScale(photo6.transform, CGFloat(scale6), CGFloat(scale6))
         photo6.transform =
             CGAffineTransformRotate(photo6.transform, CGFloat(Double(rotation6) * M_PI / 180))
+        
+       
         
         println("content offset: \(scrollView.contentOffset.y)")
     }
